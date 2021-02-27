@@ -7,6 +7,7 @@ public class Beolvaso {
 		BufferedReader br = new BufferedReader(new FileReader("a.txt"));
 		PrintWriter pw = new PrintWriter("b.txt");
 		String line = br.readLine();
+		while (line!=null) {
 		String secret = "";
 		for (int i=0;i<line.length();i++) 
 			{
@@ -15,9 +16,10 @@ public class Beolvaso {
 				secret = secret + c; 
 			}
 		pw.println(secret);
+		line = br.readLine();
+		}
 		pw.flush();
 		br.close();
 		pw.close();
 	}
-
 }
